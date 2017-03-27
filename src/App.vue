@@ -49,7 +49,8 @@ export default {
         label: this.newItem,
         isFinished: false
       })
-      this.newItem = ''
+      this.newItem = '',
+      this.$broadcast('onAddNew',this.items)
     },
     listenToMyBoy(msg){
       //console.log(msg);
